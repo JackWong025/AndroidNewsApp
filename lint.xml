@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="HandlerLeak" severity="ignore">
+        <ignore path="src/bao/women/sliding/MainActivity.java" />
+        <ignore path="src/net/ting/sliding/MainActivity.java" />
+    </issue>
+</lint>

@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout_main_id"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent" >
+
+    <bao.women.mactivity.SlideMenu
+        android:id="@+id/slide_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+ 
+        <include 
+            layout="@layout/layout_menu" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#FF99CC"
+            android:orientation="vertical" >
+            <!-- layout_title_bar 标题栏的样式 -->
+
+            <include
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_title_bar_id"
+                layout="@layout/layout_title_bar" />
+            
+            <ProgressBar
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:id="@+id/loadhtml_progress"
+                android:layout_below="@id/layout_title_bar_id"
+                android:layout_width="fill_parent"
+                android:layout_height="4dp"
+				android:progressDrawable="@drawable/my_custom_progressbar"
+                android:progress="0"
+                android:max="100"
+                 />
+            
+            <ScrollView
+                android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@id/loadhtml_progress">
+
+			    <RelativeLayout
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content" >
+
+				    <RelativeLayout
+				    android:layout_width="fill_parent"
+				    android:layout_height="100dp"
+				    android:id="@+id/details_toplayout"
+				    >
+				    	<TextView
+				    	    android:id="@+id/details_title"
+				    	    android:layout_width="fill_parent"
+				    	    android:layout_height="wrap_content"
+				    	    android:layout_alignParentLeft="true"
+				    	    android:layout_alignParentRight="true"
+				    	    android:layout_alignParentTop="true"
+				    	    android:layout_marginLeft="40dp"
+				    	    android:layout_marginRight="40dp"
+				    	    android:layout_marginTop="20dp"
+				    	    android:gravity = "center"
+				    	    android:text=" 新闻标题"
+				    	    android:textStyle="bold"
+				    	    android:textSize="20sp" />
+				    	
+				    	<TextView
+				    	    android:id="@+id/details_fromAndTime"
+				    	    android:layout_width="wrap_content"
+				    	    android:layout_height="wrap_content"
+				    	    android:layout_alignParentLeft="true"
+				    	    android:layout_alignParentBottom="true"
+				    	    android:layout_marginLeft="5dp"
+				    	    android:layout_marginBottom="5dp"
+				    	    android:text="来源：节操网    2014年3月21日"
+				    	    android:textSize="12sp" />
+					</RelativeLayout>
+					
+				<TextView
+				    android:id="@+id/details_html"
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentBottom="true"
+				    android:layout_below="@id/details_toplayout"
+				    android:layout_margin="10dp"
+				    android:gravity="center"
+				    android:textSize="15sp" />
+				
+				<ProgressBar
+				   android:id="@+id/loadhtml_progress2"
+				   android:layout_below="@id/details_html"
+				   android:layout_centerHorizontal="true" 
+			       android:indeterminateDrawable="@drawable/image_progress"
+			       android:layout_marginTop="80dp"
+			       android:layout_height="50dp"
+			       android:layout_width="50dp"/>
+				
+				
+				
+			    </RelativeLayout>	
+		    </ScrollView>
+	    </RelativeLayout>
+    </bao.women.mactivity.SlideMenu>
+</RelativeLayout>

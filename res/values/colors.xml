@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="color_0">#dedede</color>
+    <color name="color_1">#7cc576</color>
+    <color name="color_2">#2a4253</color>
+    <color name="color_3">#f26d7e</color>
+    <color name="color_4">#a286c0</color>
+    <item type="drawable" name="main_background">#FFFFFF</item>
+    <item type="drawable" name="newslist_item_background">#FFE7E7E7</item>
+    <item type="drawable" name="layout_title_bar_color">#99CCFF</item>
+    <item type="color" name="white">#FFFFFFFF</item>
+    <item type="color" name="category_title_normal_background">#FFADB2AD</item>
+</resources>

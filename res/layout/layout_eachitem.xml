@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	1.android:descendantFocusability：ViewGroup阻止其子View接收焦点
+
+--> 
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/newslist_item_layout"
+	android:layout_width="fill_parent"
+	android:layout_height="82.0dip"
+	android:descendantFocusability="blocksDescendants"
+	android:marqueeRepeatLimit="marquee_forever">
+
+	<RelativeLayout
+	    android:id="@+id/newslist_item_info_layout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="82.0dip"
+	    android:layout_alignParentRight="true"
+	    android:background="@drawable/selector_category_item" >
+
+
+		<TextView
+		    android:id="@+id/newslist_item_title"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_alignParentTop="true"
+		    android:marqueeRepeatLimit="marquee_forever"
+		    android:layout_margin="5dp"
+		    android:text="title "
+		    android:textColor="@color/newslist_item_title_selector"
+		    android:textSize="30sp"
+		    android:textStyle="bold" />
+		
+		<TextView
+		    android:id="@+id/newslist_item_source"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:layout_alignParentLeft="true"
+		    android:marqueeRepeatLimit="marquee_forever"
+		    android:layout_margin="3dp"
+		    android:text="来源和时间："
+		    android:textColor="@color/newslist_item_source_selector"
+		    android:textSize="10.0sp" />
+
+	</RelativeLayout>
+
+	<ImageView
+	    android:id="@+id/newslist_item_Image"
+	    android:layout_width="82.0dp"
+	    android:layout_height="fill_parent"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_margin="3dp"
+	    android:background="#000000" />
+
+</RelativeLayout>
